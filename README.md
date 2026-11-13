@@ -1,38 +1,22 @@
 # TalkToAFriend.io
 
-TalkToAFriend.io is a responsive AI companion website concept built as a front-end prototype. It includes:
-
-- Phone or email sign-up flow
-- Verification code step
-- Personalization survey
-- Companion naming
-- Mood check-in experience
-- Chat interface
-- Free vs membership pricing
-- Privacy messaging
+A responsive front-end prototype for the TalkToAFriend.io AI companion experience.
 
 ## Run locally
 
-Open `index.html` directly in a browser, or serve the folder with a simple local server:
+1. Download or clone this repository to your computer.
+2. Open a terminal in the project folder (the folder containing `index.html`).
+3. Run one of these commands:
 
-```bash
-python -m http.server 8000
-```
+   **Python:** `python -m http.server 8000` (on some systems use `python3 -m http.server 8000`)
 
-Then visit http://localhost:8000
+   **Node.js:** `npx serve .`
 
-## Files
+4. Keep that terminal window open, then visit **http://localhost:8000** (or the URL shown by `npx serve`).
+5. To stop the server, press `Ctrl+C` in the terminal.
 
-- `index.html` — main structure and page layout
-- `styles.css` — styling and responsive design
-- `script.js` — form and interaction logic
+You can also open `index.html` directly in a modern browser, though serving the folder locally is recommended.
 
-## Note
+## Prototype limitations
 
-This is a front-end prototype focused on the complete site experience and UI flow. It simulates verification and chat behavior without a backend or real authentication service.
-
----
-
-TalkToAFriend.io
-AI companion website for TalkToAFriend.io
-
+The verification flow is simulated; use demo code `482931`. No email or SMS is sent. Chat replies are scripted, and the membership button does not charge a payment method. Real authentication, AI, payments, and secure data storage require backend services. Do not enter sensitive personal information into this prototype.
