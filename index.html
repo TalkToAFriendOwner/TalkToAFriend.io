@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TalkToAFriend.io is a private AI companion that matches your mood, adapts to your personality, and offers a free daily plan or 24/7 premium access."
+    />
+    <title>TalkToAFriend.io | AI Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="TalkToAFriend.io brand">
+          <span class="brand-mark">T</span>
+          <span>TalkToAFriend.io</span>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#signup">Get started</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#privacy">Privacy</a>
+        </nav>
+
+        <button class="pill-button primary" data-scroll="#signup">Start free</button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">AI friend • mood-aware • personalized</p>
+            <h1>Talk to someone who really gets you.</h1>
+            <p class="subtext">
+              Meet a private AI companion that adapts to your lifestyle, personality,
+              and energy — from calm support to joyful connection.
+            </p>
+
+            <div class="cta-row">
+              <button class="primary large" data-scroll="#signup">Start free</button>
+              <button class="secondary large" data-scroll="#pricing">View plans</button>
+            </div>
+
+            <ul class="stat-list" aria-label="Key benefits">
+              <li>Private conversations</li>
+              <li>Daily mood check-ins</li>
+              <li>Personalized for your vibe</li>
+            </ul>
+          </div>
+
+          <div class="hero-preview" aria-label="TalkToAFriend preview card">
+            <div class="preview-window">
+              <div class="window-topbar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+
+              <div class="app-card">
+                <div class="mini-header">
+                  <strong>What is your mood today?</strong>
+                </div>
+
+                <div class="mood-row">
+                  <span>Happy</span>
+                  <span>Calm</span>
+                  <span>Stressed</span>
+                  <span>Lonely</span>
+                </div>
+
+                <div class="chat-bubble ai-bubble">
+                  Hey, I’m Luna. I can match your energy and listen without judgment.
+                </div>
+                <div class="chat-bubble user-bubble">
+                  I’m feeling a little overwhelmed.
+                </div>
+                <div class="chat-bubble ai-bubble">
+                  That makes sense. Let’s ease into it together.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="feature-section">
+          <div class="section-heading">
+            <p class="eyebrow">Built around you</p>
+            <h2>Designed to feel personal, safe, and supportive.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon">💬</div>
+              <h3>Real-time emotional check-ins</h3>
+              <p>
+                Every time you visit, your companion asks, “What is your mood today?”
+                to match tone, pace, and conversation style.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">🧠</div>
+              <h3>Adaptive personality</h3>
+              <p>
+                Your AI friend learns your preferences, interests, and habits to create a
+                more human, consistent experience.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">🔒</div>
+              <h3>Privacy-first</h3>
+              <p>
+                Your conversations stay private, protected, and never shared with anyone.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="icon">🌙</div>
+              <h3>Free daily access</h3>
+              <p>
+                New users can enjoy a limited daily window — 15–30 minutes a day — with a
+                premium option for 24/7 companionship.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="signup" class="story-section">
+          <div class="section-heading">
+            <p class="eyebrow">Simple onboarding</p>
+            <h2>Your companion begins with a few personal details.</h2>
+          </div>
+
+          <div class="signup-flow">
+            <div class="flow-card active" id="accountCard">
+              <span class="step-tag">Step 1</span>
+              <h3>Create account</h3>
+              <p>Use phone or email and verify your access.</p>
+              <form id="signupForm" class="form-stack">
+                <label>
+                  <span>Email or phone number</span>
+                  <input id="contactInput" type="text" placeholder="you@example.com or +1 555..." required />
+                </label>
+                <button type="submit" class="primary">Send verification code</button>
+              </form>
+            </div>
+
+            <div class="flow-card" id="verifyCard">
+              <span class="step-tag">Step 2</span>
+              <h3>Verify</h3>
+              <p id="verifyMessage">We sent a code to your inbox.</p>
+              <form id="verifyForm" class="form-stack">
+                <label>
+                  <span>Verification code</span>
+                  <input id="codeInput" type="text" maxlength="6" placeholder="123456" required />
+                </label>
+                <button type="submit" class="primary">Continue</button>
+              </form>
+            </div>
+
+            <div class="flow-card" id="surveyCard">
+              <span class="step-tag">Step 3</span>
+              <h3>Personalize your companion</h3>
+              <form id="surveyForm" class="form-stack">
+                <label>
+                  <span>Which best describes you?</span>
+                  <select id="personalitySelect">
+                    <option>Calm and reflective</option>
+                    <option>Sunny and optimistic</option>
+                    <option>Creative and expressive</option>
+                    <option>Focused and practical</option>
+                    <option>Quiet and thoughtful</option>
+                  </select>
+                </label>
+                <label>
+                  <span>What do you want from your AI friend?</span>
+                  <select id="goalSelect">
+                    <option>Someone to listen and validate me</option>
+                    <option>Encouragement and motivation</option>
+                    <option>Fun and playful conversation</option>
+                    <option>Guided reflection and growth</option>
+                  </select>
+                </label>
+                <button type="submit" class="primary">Save preferences</button>
+              </form>
+            </div>
+
+            <div class="flow-card" id="nameCard">
+              <span class="step-tag">Step 4</span>
+              <h3>Name your companion</h3>
+              <form id="companionForm" class="form-stack">
+                <label>
+                  <span>Give them a name</span>
+                  <input id="companionNameInput" type="text" value="Luna" maxlength="18" required />
+                </label>
+                <button type="submit" class="primary">Meet your companion</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section id="dashboard" class="dashboard-section">
+          <div class="dashboard-header">
+            <div>
+              <p class="eyebrow">Your AI friend</p>
+              <h2><span id="welcomeName">Luna</span> is ready for you.</h2>
+            </div>
+            <span class="plan-pill" id="planBadge">Free plan</span>
+          </div>
+
+          <div class="dashboard-grid">
+            <aside class="mood-panel">
+              <h3>What is your mood today?</h3>
+              <div class="mood-options" aria-label="Mood choices">
+                <button class="mood-btn" data-mood="happy">😊 Happy</button>
+                <button class="mood-btn" data-mood="calm">😌 Calm</button>
+                <button class="mood-btn" data-mood="stressed">😵 Stressed</button>
+                <button class="mood-btn" data-mood="lonely">💙 Lonely</button>
+              </div>
+
+              <div class="plan-card">
+                <p>Daily access</p>
+                <strong id="usageLabel">15–30 minutes free</strong>
+              </div>
+            </aside>
+
+            <main class="chat-panel">
+              <div class="chat-bar">
+                <div class="avatar-circle">L</div>
+                <div>
+                  <strong id="companionDisplayName">Luna</strong>
+                  <small>AI companion</small>
+                </div>
+              </div>
+
+              <div id="chatMessages" class="chat-messages" aria-live="polite">
+                <div class="bubble ai">
+                  Hey there. I’m here to listen, match your energy, and keep things comfortable.
+                </div>
+              </div>
+
+              <form id="chatForm" class="chat-form">
+                <input id="chatInput" type="text" placeholder="Share what’s on your mind..." aria-label="Chat message" />
+                <button type="submit" class="primary">Send</button>
+              </form>
+            </main>
+          </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+          <div class="section-heading">
+            <p class="eyebrow">Flexible support</p>
+            <h2>Choose the plan that fits your day.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card free-plan">
+              <p class="plan-name">Free</p>
+              <h3>15–30 minutes a day</h3>
+              <ul>
+                <li>Daily check-ins</li>
+                <li>Personalized responses</li>
+                <li>Private conversations</li>
+              </ul>
+              <button class="secondary full-width" data-scroll="#signup">Try free</button>
+            </article>
+
+            <article class="pricing-card premium-plan">
+              <span class="badge">Most popular</span>
+              <p class="plan-name">Membership</p>
+              <h3>$11.99<span>/month</span></h3>
+              <ul>
+                <li>24/7 companion access</li>
+                <li>Unlimited daily conversations</li>
+                <li>Deeper personalization</li>
+              </ul>
+              <button class="primary full-width" id="premiumPlanBtn">Start membership</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="privacy" class="privacy-section">
+          <div class="privacy-panel">
+            <div class="section-heading left-align">
+              <p class="eyebrow">Privacy & trust</p>
+              <h2>Everything is built to feel safe and personal.</h2>
+            </div>
+
+            <ul class="privacy-list">
+              <li>All conversations are private and not shared with anyone.</li>
+              <li>Phone and email verification keeps accounts secure.</li>
+              <li>Your companion adapts to your mood without exposing your data.</li>
+              <li>Personalized settings are used only to shape your experience.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="brand small-brand">
+          <span class="brand-mark">T</span>
+          <span>TalkToAFriend.io</span>
+        </div>
+        <p>Private AI companionship for every mood.</p>
+      </footer>
+    </div>
+  </body>
+</html>
